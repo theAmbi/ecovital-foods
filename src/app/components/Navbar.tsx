@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import mobileLogo from 'public/logo_mobile.svg'
 import logo from 'public/logo.svg'
 import menu from 'public/menu.svg'
@@ -10,9 +10,26 @@ import CustomButton from '../utils/Button';
 
 const Navbar: React.FC = () => {
     const [toggle, setToggle] = useState(false);
+    const [scrolling, setScrolling] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                setScrolling(true);
+            } else {
+                setScrolling(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
     return (
-        <header className=''>
-            <nav className={`w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] z-40 absolute top-0 left-0'}`}>
+        <header className={`z-50 fixed left-0 top-0 w-full transition-all duration-300 ease-in-out ${scrolling ? 'bg-white border-b' : 'bg-transparent'}`}>
+            <nav className={` w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] '}`}>
                 <div className={`px-5 w-full flex justify-between items-center md:container md:px-0 lg:px-0 lg:container py-12`}>
                     <div className="logo">
                         <Link href={"/"}>
@@ -21,7 +38,7 @@ const Navbar: React.FC = () => {
                         </Link>
                     </div>
 
-                    <div className={`hamburger cursor-pointer p-3 rounded-md hover:bg-headingDark/10 lg:hidden`} onClick={() => setToggle(!toggle)}>
+                    <div className={`hamburger cursor-pointer p-3 rounded-md hover:bg-headingDark/10 lg:hidden transition-all `} onClick={() => setToggle(!toggle)}>
                         {toggle ? <Image src={cancel} alt='' /> : <Image src={menu} alt='' />}
                     </div>
 
@@ -40,7 +57,7 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </nav>
-            {toggle && <div className='bg-white h-fit pt-8 pb-14 lg:hidden'>
+            {toggle && <div className='bg-white h-fit pt-8 pb-14 lg:hidden transition-all duration-300 ease-in-out'>
                 <div className='px-5 w-full flex flex-col text-center text-[16px] gap-7 text-paragraphColor md:container'>
                     <Link href={"/recipes"}>Recipes</Link>
                     <Link href={"/sustainability"}>Sustainability</Link>

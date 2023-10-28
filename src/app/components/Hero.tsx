@@ -7,20 +7,17 @@ import Image from 'next/image'
 import usersIcon from 'public/users.svg'
 import ratingIcon from 'public/rating.svg'
 import serviceIcon from 'public/service.svg'
-import Navbar from './Navbar'
 
 const Hero = () => {
     return (
         <>
             <section className='w-full min-h-fit relative '>
-
-
                 <div className='pt-10 h-[80vh] overflow-hidden relative md:container md:min-h-screen lg:pt-48 lg:container lg:flex lg:static lg:min-h-screen'>
-                    <div className="text">
+                    <div className="pt-32 md:pt-40 lg:pt-16 xl:pt-20">
                         <h2 className='text-headingDark font-bold text-4xl text-center md:text-5xl lg:text-left lg:text-6xl'>Nourish Your Body, <br />Care for Our Planet</h2>
-                        <p className='text-paragraphColor text-center text-[14px] max-w-xs mx-auto pt-10 md:text-[16px] md:max-w-md lg:text-left lg:max-w-md lg:mx-0 lg:text-[17px]'>Welcome to EcoVital Foods, where we blend culinary excellence with sustainability.
+                        <p className='text-paragraphColor text-center text-[14px] max-w-xs mx-auto pt-10 md:text-[16px] md:max-w-md lg:text-left lg:max-w-md lg:mx-0 lg:text-[18px] xl:max-w-xl xl:text-[20px] xl:pt-14'>Welcome to EcoVital Foods, where we blend culinary excellence with sustainability.
                             Discover mouthwatering plant-based recipes that are as good for you as they are for the Earth. </p>
-                        <div className='max-w-fit mx-auto mt-10 lg:max-w-none'>
+                        <div className='max-w-fit mx-auto mt-10 lg:max-w-none lg:mt-14 xl:mt-16'>
                             <CustomButton src='/recipes' bg='mainGreen' textColour='white'>Get Delicious Recipes</CustomButton>
                         </div>
                     </div>
@@ -31,7 +28,7 @@ const Hero = () => {
                     </div>
 
                     <div className='hidden md:hidden lg:block absolute right-0 top-0 z-0'>
-                        <Image src={leafDesktop} alt='' />
+                        <Image src={leafDesktop} alt='' className='xl:scale-110' />
                     </div>
                 </div>
 
