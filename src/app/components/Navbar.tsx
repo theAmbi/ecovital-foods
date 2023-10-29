@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 100) {
                 setScrolling(true);
             } else {
                 setScrolling(false);
@@ -28,8 +28,8 @@ const Navbar: React.FC = () => {
         }
     })
     return (
-        <header className={`z-50 fixed left-0 top-0 w-full transition-all duration-300 ease-in-out ${scrolling ? 'bg-white border-b' : 'bg-transparent'}`}>
-            <nav className={` w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] '}`}>
+        <header className={`z-50 fixed left-0 top-0 w-full transition-all duration-300 ease-in-out ${scrolling ? 'bg-white border-b' : 'bg-transparent'} outline-none`}>
+            <nav className={` w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] '} ${scrolling ? 'min-h-[30px]' : 'min-h-[90px]'}`}>
                 <div className={`px-5 w-full flex justify-between items-center md:container md:px-0 lg:px-0 lg:container py-12`}>
                     <div className="logo">
                         <Link href={"/"}>
