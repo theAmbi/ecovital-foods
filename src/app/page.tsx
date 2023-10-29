@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Hero from './components/Hero'
 import About from './components/About'
 import Recipes from './components/Recipes'
+import SustainablilitySection from './components/Sustainablility'
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <About />
         <Recipes />
+        <SustainablilitySection />
       </section>
     </main>
   )

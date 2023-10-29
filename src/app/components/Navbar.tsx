@@ -29,12 +29,12 @@ const Navbar: React.FC = () => {
     })
     return (
         <header className={`z-50 fixed left-0 top-0 w-full transition-all duration-300 ease-in-out ${scrolling ? 'bg-white border-b' : 'bg-transparent'} outline-none`}>
-            <nav className={` w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] '} ${scrolling ? 'min-h-[30px]' : 'min-h-[90px]'}`}>
-                <div className={`px-5 w-full flex justify-between items-center md:container md:px-0 lg:px-0 lg:container py-12`}>
+            <nav className={` w-full min-h-[90px] flex items-center bg-transparent justify-between ${toggle ? 'h-fit bg-white' : 'min-h-[90px] '} ${scrolling ? 'h-[40px] md:h-[50px] lg:h-[30px]' : 'min-h-[90px]'}`}>
+                <div className={`px-5 w-full flex justify-between items-center md:container md:px-0 lg:px-0 lg:container xl:container xl:px-0 py-12`}>
                     <div className="logo">
                         <Link href={"/"}>
                             <Image src={mobileLogo} alt='ecovital foods logo' className='md:hidden lg:hidden' />
-                            <Image src={logo} alt='ecovital foods logo' className='hidden md:block md:w-[50%] lg:w-[80%]' />
+                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[60%]' : ''}`} />
                         </Link>
                     </div>
 

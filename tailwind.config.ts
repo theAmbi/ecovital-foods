@@ -16,6 +16,10 @@ const config: Config = {
 
       container: {
         center: true,
+        padding: {
+          lg: "2rem",
+          xl: "3rem",
+        },
       },
 
       colors: {
