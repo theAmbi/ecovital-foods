@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Recipes from './components/Recipes'
 import SustainablilitySection from './components/Sustainablility'
+import ShopSection from './components/ShopSection'
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <About />
         <Recipes />
         <SustainablilitySection />
+        <ShopSection />
       </section>
     </main>
   )

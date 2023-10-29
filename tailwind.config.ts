@@ -31,6 +31,17 @@ const config: Config = {
         headingDark: "#1B2C0C",
         greenButton: "#1B2C0C",
       },
+
+      animation: {
+        "scale-pulse": "scaleBounce 1.5s ease infinite",
+      },
+
+      keyframes: {
+        scaleBounce: {
+          "0%, 100%": { transform: "scale(110%)" },
+          "50%": { transform: "scale(90%)" },
+        },
+      },
     },
   },
   plugins: [],

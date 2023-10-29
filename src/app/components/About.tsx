@@ -11,7 +11,7 @@ const About: React.FC = () => {
                 <div>
                     <h3 className='text-3xl text-headingDark font-semibold md:text-4xl lg:text-5xl xl:text-6xl'>What our brand <br /><span className='text-mainGreen'>is all about</span></h3>
                     <p className='text-paragraphColor max-w-sm py-5 text-[14px] md:py-7 lg:max-w-xl lg:text-[20px] lg:py-14'>At EcoVital Foods, we&apos;re passionate about crafting plant-based solutions for a sustainable future. Our mission: delicious, eco-friendly meals that nourish you and the planet. Join us in the journey towards greener, healthier living.</p>
-                    <div className='my-3 md:my-5'><CustomButton src='/recipes' bg='headingDark' textColour='white'>Learn More</CustomButton></div>
+                    <div className='my-3 md:my-5'><CustomButton src='/about-us' bg='headingDark' textColour='white'>Learn More</CustomButton></div>
                 </div>
 
                 {/* <div className='self-end justify-self-end bg-yellow-100'>
