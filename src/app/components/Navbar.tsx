@@ -6,11 +6,13 @@ import menu from 'public/menu.svg'
 import cancel from 'public/cancel.svg'
 import Image from 'next/image'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import CustomButton from '../utils/Button';
 
 const Navbar: React.FC = () => {
     const [toggle, setToggle] = useState(false);
-    const [scrolling, setScrolling] = useState(false)
+    const [scrolling, setScrolling] = useState(false);
+    const currentPath = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,7 +36,7 @@ const Navbar: React.FC = () => {
                     <div className="logo">
                         <Link href={"/"}>
                             <Image src={mobileLogo} alt='ecovital foods logo' className='md:hidden lg:hidden' />
-                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[60%]' : ''}`} />
+                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[55%]' : ''}`} />
                         </Link>
                     </div>
 
@@ -44,9 +46,9 @@ const Navbar: React.FC = () => {
 
                     <div className="desktop hidden lg:flex lg:justify-between items-center">
                         <div className="links flex text-[18px] gap-12 mr-28">
-                            <Link href={"/recipes"}>Recipes</Link>
-                            <Link href={"/sustainability"}>Sustainability</Link>
-                            <Link href={"/contact"}>Contact</Link>
+                            <Link href={"/recipes"} className={`${currentPath === '/recipes' ? 'text-mainGreen font-semibold' : ''}`}>Recipes</Link>
+                            <Link href={"/sustainability"} className={`${currentPath === '/sustainability' ? 'text-mainGreen font-semibold' : ''}`}>Sustainability</Link>
+                            <Link href={"/contact"} className={`${currentPath === '/contact' ? 'text-mainGreen font-semibold' : ''}`}>Contact</Link>
                         </div>
 
 
@@ -59,9 +61,9 @@ const Navbar: React.FC = () => {
             </nav>
             {toggle && <div className='bg-white h-fit pt-8 pb-14 lg:hidden transition-all duration-300 ease-in-out'>
                 <div className='px-5 w-full flex flex-col text-center text-[16px] gap-7 text-paragraphColor md:container'>
-                    <Link href={"/recipes"}>Recipes</Link>
-                    <Link href={"/sustainability"}>Sustainability</Link>
-                    <Link href={"/contact"}>Contact</Link>
+                    <Link href={"/recipes"} className={`${currentPath === '/recipes' ? 'text-mainGreen font-semibold' : ''}`}>Recipes</Link>
+                    <Link href={"/sustainability"} className={`${currentPath === '/sustainability' ? 'text-mainGreen font-semibold' : ''}`}>Sustainability</Link>
+                    <Link href={"/contact"} className={`${currentPath === '/contact' ? 'text-mainGreen font-semibold' : ''}`}>Contact</Link>
                     <Link href={"/shop"} className='py-4 bg-mainGreen font-medium text-white rounded-md mt-6'>Go to Shop</Link>
                 </div>
             </div>}

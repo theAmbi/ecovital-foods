@@ -4,6 +4,7 @@ import About from './components/About'
 import Recipes from './components/Recipes'
 import SustainablilitySection from './components/Sustainablility'
 import ShopSection from './components/ShopSection'
+import Reviews from './components/Reviews'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Recipes />
         <SustainablilitySection />
         <ShopSection />
+        <Reviews />
       </section>
     </main>
   )

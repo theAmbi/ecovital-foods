@@ -30,6 +30,7 @@ const config: Config = {
         mainGreen: "#7EBD42",
         headingDark: "#1B2C0C",
         greenButton: "#1B2C0C",
+        reviewGray: "#F2F5F7",
       },
 
       animation: {
