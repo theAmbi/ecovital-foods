@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import Navbar from './components/Navbar'
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={outfit.className}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   )
