@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
                     <div className="logo">
                         <Link href={"/"}>
                             <Image src={mobileLogo} alt='ecovital foods logo' className='md:hidden lg:hidden' />
-                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[55%]' : ''}`} />
+                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[52%]' : ''}`} />
                         </Link>
                     </div>
 
