@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
                     <div className="logo">
                         <Link href={"/"}>
                             <Image src={mobileLogo} alt='ecovital foods logo' className='md:hidden lg:hidden' />
-                            <Image src={logo} alt='ecovital foods logo' className={`hidden md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:w-[52%]' : ''}`} />
+                            <Image src={logo} alt='ecovital foods logo' className={`hidden transition duration-300 ease-in-out md:block md:w-[50%] lg:w-[80%] ${scrolling ? 'lg:scale-75' : ''}`} />
                         </Link>
                     </div>
 
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
 
                     </div>
 
-                    <div className="shop hidden lg:flex ">
+                    <div className={`shop transition duration-300 ease-in-out hidden lg:flex ${scrolling ? 'scale-90' : ''}`}>
                         <CustomButton src='/shop' bg='mainGreen' textColour='white' >Go to Shop</CustomButton>
                     </div>
                 </div>

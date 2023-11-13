@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --scrollbar-color: #E2E7EA;
+  --scrollbar-thumb-color: #7EBD42;
+  --paragraph: #595C61;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--scrollbar-thumb-color);
+}
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {

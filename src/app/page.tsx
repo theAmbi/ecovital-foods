@@ -5,11 +5,13 @@ import Recipes from './components/Recipes'
 import SustainablilitySection from './components/Sustainablility'
 import ShopSection from './components/ShopSection'
 import Reviews from './components/Reviews'
+import CallToAction from './components/CTA'
+import Partners from './components/Partners'
 
 
 export default function Home() {
   return (
-    <main className="bg-heroBG min-h-[70vh] ">
+    <main className="bg-heroBG min-h-[70vh]">
       <section className=''>
         <Hero />
         <About />
@@ -17,6 +19,8 @@ export default function Home() {
         <SustainablilitySection />
         <ShopSection />
         <Reviews />
+        <CallToAction />
+        <Partners />
       </section>
     </main>
   )

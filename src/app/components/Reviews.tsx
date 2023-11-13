@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import topWave from 'public/review-top-wave.svg'
-import bottomWave from 'public/review-bottom-wave.svg'
 import { reviews } from '../../../userReviews'
 import quote from '/public/quote.svg'
 import filledStar from 'public/star-filled.svg'
@@ -17,12 +16,12 @@ import outline from 'public/star-outline.svg'
 
 const Reviews: React.FC = () => {
     return (
-        <section className='w-full bg-white h-fit py-28 relative'>
+        <section className='w-full bg-white h-fit pt-28 relative'>
             <h3 className='text-3xl text-center text-headingDark font-semibold md:text-4xl lg:text-5xl xl:text-6xl'>Here from <span className='text-mainGreen'>our users!</span></h3>
 
             <div className=''>
                 <Image src={topWave} alt='' className='w-full' />
-                <div className=" reviews w-full min-h-[50vh]  py-14 bg-reviewGray lg:pt-14 lg:pb-32 ">
+                <div className=" reviews w-full min-h-[50vh] py-20 bg-reviewGray lg:pt-14 lg:pb-32 ">
                     <div className='container flex flex-col flex-wrap items-center  md:grid md:grid-cols-2 lg:grid-cols-3 max-w-fit gap-10 '>
                         {reviews.map(({ id, name, review, stars, outlinedStar }) => {
                             return <div key={id} className='max-w-[320px] mx-auto bg-white py-10 px-4 text-paragraphColor rounded-2xl md:max-w-[330px] lg:max-w-[340px] lg:px-6 xl:max-w-[390px] xl:h-[400px] '>
@@ -43,7 +42,6 @@ const Reviews: React.FC = () => {
                         })}
                     </div>
                 </div>
-                <Image src={bottomWave} alt='' className='w-full' />
 
             </div>
         </section>

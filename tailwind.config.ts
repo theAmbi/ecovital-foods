@@ -31,6 +31,8 @@ const config: Config = {
         headingDark: "#1B2C0C",
         greenButton: "#1B2C0C",
         reviewGray: "#F2F5F7",
+        placeholder: "#C7CCCF",
+        ctaPressed: "#6DA836",
       },
 
       animation: {
